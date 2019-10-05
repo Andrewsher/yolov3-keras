@@ -5,14 +5,16 @@ Keras-based YOLO v3, baseline solution for [rebar-detection on Data-Foundation](
 Step 1. Install required packages.
 
 ``` bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Step 2. Generate VOC dataset. It would not be necessary if you already have one.
 
 ``` bash
-python toXML/generate_txt.py
-python toXML/main.py
+cd toXML
+python generate_txt.py
+python main.py
+cd ..
 ```
 
 Step 3. Gererate augmented dataset with h5py file format. This step contributes to speeding up the training procedure.
